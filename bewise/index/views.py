@@ -1,3 +1,4 @@
+from rest_framework import generics
 from rest_framework.views import APIView
 from index.models import Requests
 from index.serializer import IntegerSerializer, RequestSerializer
@@ -7,6 +8,7 @@ from index.utils import create_questions
 
 
 class RequestsAPIView(APIView):
+    serializer_class = IntegerSerializer
     def post(self, request):
 
         answer = Requests.objects.all()

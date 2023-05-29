@@ -1,11 +1,11 @@
 from rest_framework import serializers
+from index.models import Requests
 
 
-class RequestSerializer(serializers.Serializer):
-    id_question = serializers.IntegerField()
-    text_question = serializers.CharField()
-    text_answer = serializers.CharField()
-    created_at = serializers.DateTimeField()
+class RequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Requests
+        fields = ('__all__')
 
 class IntegerSerializer(serializers.Serializer):
     questions_num = serializers.IntegerField(min_value=1)

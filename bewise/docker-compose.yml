@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    volumes:
+      - db:/var/lib/postgresql/data/
+  web:
+    build: .
+    command:  bash -c "python manage.py makemigrations && 
+              python manage.py migrate &&
+              python manage.py runserver 0.0.0.0:8000 "
+    ports:
+      - 8000:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=bewise.settings
+    volumes:
+      - .:/usr/src/bewise/
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+
+volumes:
+  db:
+    driver: local
