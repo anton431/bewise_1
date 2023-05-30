@@ -47,11 +47,11 @@ docker-compose up
 ```
 docker ps -a
 ```
-- Создайте суперпользователя, войти в админку можно <a href=http://localhost:8000/admin>тут</a>:
+- Создайте суперпользователя, войти в админку можно <a target="_blank" href=http://localhost:8000/admin>тут</a>:
 ```
 docker exec -it <CONTAINER ID> python manage.py createsuperuser
 ```
-5. В проекте используется PostgreSQL, зайдите в <a href=http://localhost:5051/login>pgAdmin</a> с помощью email и пароля:
+5. В проекте используется PostgreSQL, зайдите в <a target="_blank" href=http://localhost:5051/login>pgAdmin</a> с помощью email и пароля:
 ```
 pgadmin4@pgadmin.org
 ```
@@ -68,7 +68,7 @@ root
 
 >![img_3.png](img/img_3.png) Цель достигнута
 
-7. Можно делать <a href=http://localhost:8000/api/v1/requests>запросы</a>:
+7. Можно делать <a target="_blank" href=http://localhost:8000/api/v1/requests>запросы</a>:
 > ![img.png](img/img_4.png) Запрос через форму drf
 
 >![img_1.png](img/img_5.png) Запрос в требуемой форме
@@ -99,4 +99,4 @@ python manage.py runserver
 ```
 python manage.py createsuperuser
 ```
-- можно пользоваться <a href=http://127.0.0.1:8000/api/v1/requests>сервисом</a>.
+- можно пользоваться <a target="_blank" href=http://127.0.0.1:8000/api/v1/requests>сервисом</a>.
