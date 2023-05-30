@@ -4,10 +4,6 @@ services:
   db:
     image: postgres:15
     restart: always
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
     volumes:
       - db:/var/lib/postgresql/data/
   web:
@@ -27,7 +23,7 @@ services:
       - db
   pgadmin:
     image: dpage/pgadmin4
-    container_name: demo-pgadmin #you can change this
+    container_name: demo-pgadmin
     depends_on:
       - db
     ports:
