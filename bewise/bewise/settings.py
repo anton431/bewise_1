@@ -91,7 +91,17 @@ DATABASES = {
         'PORT': '',
     }
 }
-
+# для запуска без докера
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': os.getenv("PASSWORD"),
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
