@@ -64,7 +64,7 @@ root
 
 >![img_1.png](img/img_1.png)
 
->![img_2.png](img/img_2.png) Пароль используйте вашей PosgreSQL
+>![img_2.png](img/img_2.png) Пароль вашей PosgreSQL
 
 >![img_3.png](img/img_3.png) Цель достигнута
 
