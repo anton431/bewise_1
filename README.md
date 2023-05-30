@@ -99,4 +99,4 @@ python manage.py runserver
 ```
 python manage.py createsuperuser
 ```
-- можно пользоваться <a target="_blank" href=http://127.0.0.1:8000/api/v1/requests>сервисом</a>.
+- можно пользоваться <a href=http://127.0.0.1:8000/api/v1/requests target="_blank">сервисом</a>.
