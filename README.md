@@ -34,7 +34,7 @@ git clone https://github.com/anton431/bewise_1.git
 ```
 pip install -r requirements.txt
 ```
-3. Установите пароль от базы данных в docker-compose в переменной POSTGRES_PASSWORD:
+3. Установите  пароль от вашей базы данных в docker-compose в переменной POSTGRES_PASSWORD:
 ![img.png](img/img8.png)
 
 4. Выполните команды:
@@ -86,7 +86,7 @@ root
 > ![img_3.png](img/img_7.png) В результате в базу добавятся 10 уникальных вопросов, ответ - предыдущий сохраненный вопрос для викторины.
 9. Запуск без docker:
 - выполните пункты 1 и 2;
-- заполните строчки 95-104 в соответствии с Вашим PostgreSQL;
+- заполните DATABASES в settings.py в соответствии с Вашим PostgreSQL;
 - выполните следующие команды:
 ```
 python manage.py makemigrations
