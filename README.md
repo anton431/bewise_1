@@ -21,8 +21,8 @@ Web framework: __Django & DRF__<br>
 ## Приватная информация
 
 >Скрытая информация в файле .env:<br>
->>PASSWORD — пароль от postgres;<br>
-SECRET_KEY — django key;<br>
+>>PASSWORD=пароль от postgres<br>
+SECRET_KEY=django key<br>
 
 
 ## Запуск
@@ -34,14 +34,17 @@ git clone https://github.com/anton431/bewise_1.git
 ```
 pip install -r requirements.txt
 ```
-3. Выполните команды:
+3. Установите пароль от базы данных в docker-compose в переменной POSTGRES_PASSWORD:
+![img.png](img/img8.png)
+
+4. Выполните команды:
 ```
 docker-compose build
 ```
 ```
 docker-compose up
 ```
-4. Создайте суперпользователя django и заполните требуемые поля (необязательный пункт):
+5. Создайте суперпользователя django и заполните требуемые поля (необязательный пункт):
 
 - Для этого найдите CONTAINER ID образа bewise командой:
 ```
@@ -51,7 +54,7 @@ docker ps -a
 ```
 docker exec -it <CONTAINER ID> python manage.py createsuperuser
 ```
-5. В проекте используется PostgreSQL, зайдите в <a target="_blank" href=http://localhost:5051/login>pgAdmin</a> с помощью email и пароля:
+6. В проекте используется PostgreSQL, зайдите в <a target="_blank" href=http://localhost:5051/login>pgAdmin</a> с помощью email и пароля:
 ```
 pgadmin4@pgadmin.org
 ```
@@ -59,7 +62,7 @@ pgadmin4@pgadmin.org
 root
 ```
 
-6. Зарегистрируйте сервер: <br>
+7. Зарегистрируйте сервер: <br>
 >![img.png](img/img.png)
 
 >![img_1.png](img/img_1.png)
@@ -68,7 +71,7 @@ root
 
 >![img_3.png](img/img_3.png) Цель достигнута
 
-7. Можно выполнять <a target="_blank" href=http://localhost:8000/api/v1/requests>запросы</a>:
+8. Можно выполнять <a target="_blank" href=http://localhost:8000/api/v1/requests>запросы</a>:
 > ![img.png](img/img_4.png) Запрос через форму drf
 
 >![img_1.png](img/img_5.png) Запрос в требуемой форме
@@ -81,7 +84,7 @@ root
 > ![img_2.png](img/img_6.png) Пример работы
 
 > ![img_3.png](img/img_7.png) В результате в базу добавятся 10 уникальных вопросов, ответ - предыдущий сохраненный вопрос для викторины.
-8.  Запуск без docker:
+9. Запуск без docker:
 - выполните пункты 1 и 2;
 - заполните строчки 95-104 в соответствии с Вашим PostgreSQL;
 - выполните следующие команды:
