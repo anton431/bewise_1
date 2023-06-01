@@ -6,6 +6,8 @@ services:
     restart: always
     volumes:
       - db:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_PASSWORD: password
   web:
     build: .
     command:  bash -c "python manage.py makemigrations && 
